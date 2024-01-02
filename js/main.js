@@ -1,10 +1,12 @@
 let deadLine = 601
 let timer = document.querySelector('.timer')
 let install = document.querySelector('.install-btn')
+let manual = document.querySelector('.main-manual')
 
 install.addEventListener('click', () => {
 	install.classList.add('install-btn-disable')
 	timer.classList.add('timer-end')
+	manual.style.display = "block"
 })
 
 function countdown() {
