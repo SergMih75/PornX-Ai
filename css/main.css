@@ -100,6 +100,14 @@
 	-webkit-animation: colorBtn 3s infinite;
 }
 
+.install-btn-disable {
+	cursor: not-allowed;
+	pointer-events: none;
+	background-color: #878787;
+	animation: none;
+	-webkit-animation: none;
+}
+
 @keyframes colorBtn {
 	0% {
 		background-color: #01875f;
@@ -221,11 +229,20 @@
 
 .timer {
 	text-align: center;
-	margin-bottom: 20%;
+	margin-bottom: 20px;
 
 	font-size: 32px;
 	font-weight: 900;
 	color: #000;
+}
+
+.timer-end {
+	text-transform: uppercase;
+
+	color: #f80606;
+	text-shadow: 0px 0px 6px #da1010;
+	animation: access 3s infinite;
+	-webkit-animation: access 0.5s infinite;
 }
 
 /* Manual pages */
@@ -299,4 +316,30 @@
 .manual__item-small {
 	width: 75px;
 	height: 131px;
+}
+
+.step-one,
+.step-two,
+.step-three {
+	opacity: 1;
+}
+
+.step-one {
+	animation: visibilityAppearance 3s;
+	-webkit-animation: visibilityAppearance 3s;
+}
+
+.step-two {
+	animation: visibilityAppearance 6s;
+	-webkit-animation: visibilityAppearance 6s;
+}
+
+.step-three {
+	animation: visibilityAppearance 9s;
+	-webkit-animation: visibilityAppearance 9s;
+}
+
+@keyframes visibilityAppearance {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
 }
