@@ -1,6 +1,11 @@
-let deadLine = 600
+let deadLine = 601
 let timer = document.querySelector('.timer')
 let install = document.querySelector('.install-btn')
+
+install.addEventListener('click', () => {
+	install.classList.add('install-btn-disable')
+	timer.classList.add('timer-end')
+})
 
 function countdown() {
 	let min = 0
@@ -8,10 +13,10 @@ function countdown() {
 
 	if (deadLine > 0) {
 		if (install.classList.contains('install-btn-disable')) {
-			install.classList.remove('install-btn-disable')
-			timer.classList.remove('timer-end')
+			deadLine = 0
+		} else {
+			deadLine = deadLine - 1
 		}
-		deadLine = deadLine - 1
 		min = Math.floor(deadLine / 60)
 		sec = Math.floor(deadLine - min * 60)
 		timer.innerHTML = `${min} min ${sec} sec`
