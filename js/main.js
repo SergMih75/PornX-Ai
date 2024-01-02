@@ -1,4 +1,4 @@
-let deadLine = 60
+let deadLine = 600
 let timer = document.querySelector('.timer')
 let install = document.querySelector('.install-btn')
 
